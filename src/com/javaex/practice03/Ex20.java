@@ -7,11 +7,15 @@ public class Ex20 {
 	
 		public static void main(String[] args) {
 			
+			boolean game = true;
+			
+			while(game) {
 			System.out.println("====================");
 			System.out.println("숫자맞추기게임 시작");
 			System.out.println("====================");
-			while(true) {
-				Scanner sc = new Scanner(System.in);
+			Scanner sc = new Scanner(System.in);
+			while(game) {
+			
 				System.out.print(">>");
 				int N = sc.nextInt();
 				if(N<29) {
@@ -25,19 +29,20 @@ public class Ex20 {
 					String choice = ss.nextLine();
 					String y="y";
 					String n="n";
-					if(choice.equals("y")) {
+					if(choice.equals(y)) {
 						System.out.println("====================");
 						System.out.println("숫자맞추기게임 종료");
 						System.out.println("====================");
-						break;
+						game = false;
 					}else if(choice.equals(n)){
-						System.out.print("한판더 ㄱㄱ 숫자입력 >>");
 						
+						break;
 						
 					}
 				}
-				
+			}
 				
 			}
-		}
+		
+}
 }
